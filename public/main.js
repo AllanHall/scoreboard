@@ -1,11 +1,13 @@
 let teamOneScore = 0
 let teamTwoScore = 0
 let teamNameOne = 'Team 1'
+let teamNameTwo = 'Team 2'
 
 const main = () => {
   document.querySelector('.team1Score').textContent = teamOneScore
   document.querySelector('.team2Score').textContent = teamTwoScore
   document.querySelector('.team1Name').textContent = teamNameOne
+  document.querySelector('.team2Name').textContent = teamNameTwo
 }
 
 const teamOneAddOne = () => {
@@ -33,6 +35,11 @@ const teamOneUpdateName = () => {
   document.querySelector('.team1Name').textContent = teamNameOne
 }
 
+const teamTwoUpdateName = () => {
+  teamNameTwo = document.querySelector('.team-2-name').value
+  document.querySelector('.team2Name').textContent = teamNameTwo
+}
+
 document.addEventListener('DOMContentLoaded', main)
 document
   .querySelector('.team-1-add-1-button')
@@ -49,3 +56,6 @@ document
 document
   .querySelector('.update-team-1-name')
   .addEventListener('click', teamOneUpdateName)
+document
+  .querySelector('.update-team-2-name')
+  .addEventListener('click', teamTwoUpdateName)
