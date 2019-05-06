@@ -39,7 +39,7 @@ const teamTwoAddOne = () => {
 }
 
 const teamTwoSubtractOne = () => {
-  if (teamOneScore <= 0) {
+  if (teamTwoScore <= 0) {
     return 0
   }
   teamTwoScore -= 1
