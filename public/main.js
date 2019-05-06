@@ -2,12 +2,19 @@ let teamOneScore = 0
 let teamTwoScore = 0
 let teamNameOne = 'Team 1'
 let teamNameTwo = 'Team 2'
+let periodNumber = 1
 
 const main = () => {
   document.querySelector('.team1Score').textContent = teamOneScore
   document.querySelector('.team2Score').textContent = teamTwoScore
   document.querySelector('.team1Name').textContent = teamNameOne
   document.querySelector('.team2Name').textContent = teamNameTwo
+  document.querySelector('.periodNumber').textContent = periodNumber
+}
+
+const updatePeriod = () => {
+  periodNumber += 1
+  document.querySelector('.periodNumber').textContent = periodNumber
 }
 
 const teamOneAddOne = () => {
@@ -41,6 +48,7 @@ const teamTwoUpdateName = () => {
 }
 
 document.addEventListener('DOMContentLoaded', main)
+document.querySelector('.update-period').addEventListener('click', updatePeriod)
 document
   .querySelector('.team-1-add-1-button')
   .addEventListener('click', teamOneAddOne)
