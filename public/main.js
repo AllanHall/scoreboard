@@ -13,6 +13,9 @@ const main = () => {
 }
 
 const updatePeriod = () => {
+  if (periodNumber >= 3) {
+    return 3
+  }
   periodNumber += 1
   document.querySelector('.periodNumber').textContent = periodNumber
 }
@@ -23,6 +26,9 @@ const teamOneAddOne = () => {
 }
 
 const teamOneSubtractOne = () => {
+  if (teamOneScore <= 0) {
+    return 0
+  }
   teamOneScore -= 1
   document.querySelector('.team1Score').textContent = teamOneScore
 }
@@ -33,6 +39,9 @@ const teamTwoAddOne = () => {
 }
 
 const teamTwoSubtractOne = () => {
+  if (teamOneScore <= 0) {
+    return 0
+  }
   teamTwoScore -= 1
   document.querySelector('.team2Score').textContent = teamTwoScore
 }
